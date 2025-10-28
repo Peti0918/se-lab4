@@ -1,19 +1,26 @@
-GT4500,2,0,1,0
-TORPEDO,ALL
-TORPEDO,ALL
-TORPEDO,ALL
-
 GT4500,1,0,2,0
-TORPEDO,SINGLE
-TORPEDO,SINGLE
-TORPEDO,SINGLE
+TORPEDO,SINGLE #elsővel lő SUCCESS
+TORPEDO,SINGLE #másodikkal lő SUCCESS
+TORPEDO,SINGLE #elsővel nem tud lőni, ezért a másodikkal lő SUCCESS
 
 GT4500,0,0,2,0
-TORPEDO,SINGLE
-TORPEDO,SINGLE
-TORPEDO,SINGLE
+TORPEDO,SINGLE #elsővel nem tud lőni, ezért másodikkal lő SUCCESS
+TORPEDO,SINGLE #elsővel nem tud lőni, ezért másodikkal lő SUCCESS
+TORPEDO,SINGLE #kifogyott a tár, elővel lőne de nem tud, másodikkal lőne de nem tud FAIL
+
+GT4500,2,0,0,0 #elsővel lő SUCCESS
+TORPEDO,SINGLE #másodikkal nem tud lőni, ezért az elsővel lő SUCCESS
+TORPEDO,SINGLE #másodikkal nem tud lőni, ezért az elsővel lő SUCCESS
+
+GT4500,10,1,10,0 
+TORPEDO,SINGLE #elsővel nem tud lőni hiba miatt, mivel hiba volt nem lőhet a másodikkal -> FAIL
+
+GT4500,2,0,1,0
+TORPEDO,ALL #mindkettő lő -> SUCCESS
+TORPEDO,ALL #csak az első lő -> SUCCES
+TORPEDO,ALL #kifogyott mindkettő -> FAIL
 
 GT4500,1,0,2,0
-TORPEDO,ALL
-TORPEDO,ALL
-TORPEDO,ALL
+TORPEDO,ALL #mindkettő lő -> SUCCESS
+TORPEDO,ALL #csak második lő -> SUCCESS
+TORPEDO,SINGLE #kifogyott -> FAIL 
